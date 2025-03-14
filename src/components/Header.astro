@@ -1,11 +1,59 @@
-<header class="flex justify-between items-center py-5 w-[1120px] mx-auto">
-	<a href="/"><h1 class="font-bold">{'<josergz/>'}</h1></a>
-	<nav class="flex flex-row gap-x-10">
-		<a class="hover:text-blue-500" href="/">Home</a>
-		<a class="hover:text-blue-500" href="/about">About</a>
-		<a class="hover:text-blue-500" href="/projects">Projects</a>
-		<a class="hover:text-blue-500" href="mailto:joserdgz.dev@gmail.com"
-			>Contact</a
-		>
-	</nav>
+<header
+	class="sticky top-0 backdrop-blur-sm z-50 py-4 w-full px-4 sm:px-6 lg:px-8"
+>
+	<div class="flex justify-between items-center max-w-6xl mx-auto">
+		<a href="#top" class="group flex items-center gap-2">
+			<h1
+				class="font-bold text-xl text-white group-hover:text-blue-600 transition-colors"
+			>
+				{'<josergz/>'}
+			</h1>
+		</a>
+
+		<!-- Navegación-->
+		<nav class="hidden md:flex items-center gap-8">
+			<ul class="flex gap-6">
+				<li>
+					<a
+						class="text-white hover:text-blue-600 transition-colors font-medium relative py-1
+                    hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0
+                    hover:after:w-full hover:after:h-[2px] hover:after:bg-blue-600"
+						href="#top"
+					>
+						Home
+					</a>
+				</li>
+				<li>
+					<a
+						class="text-white hover:text-blue-600 transition-colors font-medium relative py-1
+                    hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0
+                    hover:after:w-full hover:after:h-[2px] hover:after:bg-blue-600"
+						href="#about"
+					>
+						About
+					</a>
+				</li>
+				<li>
+					<a
+						class="text-white hover:text-blue-600 transition-colors font-medium relative py-1
+                    hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0
+                    hover:after:w-full hover:after:h-[2px] hover:after:bg-blue-600"
+						href="#projects"
+					>
+						Projects
+					</a>
+				</li>
+				<li>
+					<a
+						class="text-white hover:text-blue-600 transition-colors font-medium relative py-1
+                    hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0
+                    hover:after:w-full hover:after:h-[2px] hover:after:bg-blue-600"
+						href="mailto:joserdgz.dev@gmail.com"
+					>
+						Contact
+					</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
 </header>
