@@ -1,0 +1,53 @@
+---
+import Git from './icons/git.astro';
+import Github from '../components/icons/github.astro';
+import Html from './icons/html.astro';
+import Css from './icons/css.astro';
+import Sass from './icons/sass.astro';
+import Bootstrap from './icons/bootstrap.astro';
+import Tailwind from './icons/tailwind.astro';
+import Javascript from './icons/javascript.astro';
+import Astroicon from './icons/astroicon.astro';
+---
+
+<section class="flex flex-col m-auto space-y-10 p-4">
+	<h1 class="text-center font-semibold text-3xl">Habilidades</h1>
+	<ul class="flex m-auto gap-10 flex-wrap w-4/5 justify-center">
+		<li class="flex flex-col items-center gap-2 font-medium text-xl">
+			<Html class="size-16 transition-all duration-300 hover:scale-125" />
+			<span class="mt-1 text-sm text-white/90">HTML</span>
+		</li>
+		<li class="flex flex-col items-center gap-2 font-medium text-xl">
+			<Css class="size-16 transition-all duration-300 hover:scale-125" />
+			<span class="mt-1 text-sm text-white/90">CSS</span>
+		</li>
+		<li class="flex flex-col items-center gap-2 font-medium text-xl">
+			<Sass class="size-16 transition-all duration-300 hover:scale-125" />
+			<span class="mt-1 text-sm text-white/90">Sass</span>
+		</li>
+		<li class="flex flex-col items-center gap-2 font-medium text-xl">
+			<Bootstrap class="size-16 transition-all duration-300 hover:scale-125" />
+			<span class="mt-1 text-sm text-white/90">Bootstrap</span>
+		</li>
+		<li class="flex flex-col items-center gap-2 font-medium text-xl">
+			<Tailwind class="size-16 transition-all duration-300 hover:scale-125" />
+			<span class="mt-1 text-sm text-white/90">Tailwind</span>
+		</li>
+		<li class="flex flex-col items-center gap-2 font-medium text-xl">
+			<Javascript class="size-16 transition-all duration-300 hover:scale-125" />
+			<span class="mt-1 text-sm text-white/90">JavaScript</span>
+		</li>
+		<li class="flex flex-col items-center gap-2 font-medium text-xl">
+			<Astroicon class="size-16 transition-all duration-300 hover:scale-125" />
+			<span class="mt-1 text-sm text-white/90">Astro</span>
+		</li>
+		<li class="flex flex-col items-center gap-2 font-medium text-xl">
+			<Git class="size-16 transition-all duration-300 hover:scale-125" />
+			<span class="mt-1 text-sm text-white/90">Git</span>
+		</li>
+		<li class="flex flex-col items-center gap-2 font-medium text-xl">
+			<Github class="size-16 transition-all duration-300 hover:scale-125" />
+			<span class="mt-1 text-sm text-white/90">GitHub</span>
+		</li>
+	</ul>
+</section>

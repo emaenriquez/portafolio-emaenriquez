@@ -2,11 +2,16 @@
 import Layout from '../layouts/Layout.astro';
 import LinkedinIcon from '../components/icons/linkedin.astro';
 import GitHubIcon from '../components/icons/github.astro';
+import Habilidades from '../components/habilidades.astro';
+import About from '../components/about.astro';
 ---
 
-<Layout title="José Rodríguez">
+<Layout
+	title="Porfolio de José Rodríguez - Desarrollador y programador web"
+	description="Contrata a José Rodríguez, frontend developer "
+>
 	<main>
-		<section class="w-full mx-auto lg:w-[740px] py-40 space-y-2">
+		<section class="w-full mx-auto lg:w-[740px] py-44 space-y-2">
 			<h2 class="text-white text-3xl">Hi, I'm José Rodríguez</h2>
 			<h1 id="typed-container" class="text-blue-500 text-5xl font-bold">
 				<span id="typed"></span>
@@ -52,6 +57,9 @@ import GitHubIcon from '../components/icons/github.astro';
 			</ul>
 		</section>
 	</main>
+
+	<Habilidades />
+	<About />
 </Layout>
 
 <script>
