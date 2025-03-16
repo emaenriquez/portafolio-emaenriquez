@@ -1,5 +1,58 @@
 ---
 import GitHubIcon from '../components/icons/github.astro';
+import Astroicon from './icons/astroicon.astro';
+import Tailwind from './icons/tailwind.astro';
+import Javascript from './icons/javascript.astro';
+import Bootstrap from './icons/bootstrap.astro';
+import Html from './icons/html.astro';
+import Sass from './icons/sass.astro';
+import Css from './icons/css.astro';
+import Vscode from './icons/vscode.astro';
+import Link from './icons/link.astro';
+
+const TAGS = {
+	ASTRO: {
+		name: 'Astro',
+		class: 'bg-[#202938] text-white',
+		icon: Astroicon,
+	},
+	TAILWIND: {
+		name: 'Tailwind',
+		class: 'bg-[#202938] text-white',
+		icon: Tailwind,
+	},
+	JAVASCRIPT: {
+		name: 'JavaScript',
+		class: 'bg-[#202938] text-white',
+		icon: Javascript,
+	},
+	BOOTSTRAP: {
+		name: 'Bootstrap',
+		class: 'bg-[#202938] text-white',
+		icon: Bootstrap,
+	},
+	HTML: {
+		name: 'HTML',
+		class: 'bg-[#202938] text-white',
+		icon: Html,
+	},
+	SASS: {
+		name: 'Sass',
+		class: 'bg-[#202938] text-white',
+		icon: Sass,
+	},
+	CSS: {
+		name: 'CSS',
+		class: 'bg-[#202938] text-white',
+		icon: Css,
+	},
+	VSCODE: {
+		name: 'VSCode',
+		class: 'bg-[#202938] text-white',
+		icon: Vscode,
+	},
+};
+
 const PROJECTS = [
 	{
 		title: 'One Dark Vibrant Theme',
@@ -8,30 +61,16 @@ const PROJECTS = [
 		link: 'https://marketplace.visualstudio.com/items?itemName=josergz.one-dark-vibrant-theme',
 		github: 'https://github.com/josergz/one-dark-vibrant-theme',
 		image: '/img/vscodetheme-preview.webp',
-		tags: [
-			{
-				name: 'VSCode',
-				icon: 'https://raw.githubusercontent.com/devicons/devicon/ca28c779441053191ff11710fe24a9e6c23690d6/icons/vscode/vscode-original.svg',
-			},
-		],
+		tags: [TAGS.VSCODE],
 	},
 	{
 		title: 'Porfolio de Programador Web',
 		description:
 			'Este es mi porfolio personal donde muestro mis habilidades como desarrollador web. Utilizo Astro para la estructura y Tailwind para el diseño, creando una experiencia optimizada y rápida para los usuarios.',
-		link: '#',
+		link: 'https://portfolio-one-khaki-21.vercel.app/',
 		github: 'https://github.com/josergz/portfolio',
 		image: '/img/portfolio-preview.webp',
-		tags: [
-			{
-				name: 'Astro',
-				icon: 'https://raw.githubusercontent.com/devicons/devicon/ca28c779441053191ff11710fe24a9e6c23690d6/icons/astro/astro-original.svg',
-			},
-			{
-				name: 'Tailwind',
-				icon: 'https://raw.githubusercontent.com/devicons/devicon/ca28c779441053191ff11710fe24a9e6c23690d6/icons/tailwindcss/tailwindcss-original.svg',
-			},
-		],
+		tags: [TAGS.ASTRO, TAGS.TAILWIND],
 	},
 	{
 		title: 'Weather App',
@@ -40,20 +79,7 @@ const PROJECTS = [
 		link: 'https://weather-app-itsr.vercel.app/',
 		github: 'https://github.com/josergz/weather_app',
 		image: '/img/weather-preview.webp',
-		tags: [
-			{
-				name: 'JavaScript',
-				icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
-			},
-			{
-				name: 'Firebase',
-				icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg',
-			},
-			{
-				name: 'Bootstrap',
-				icon: 'https://raw.githubusercontent.com/devicons/devicon/ca28c779441053191ff11710fe24a9e6c23690d6/icons/bootstrap/bootstrap-original.svg',
-			},
-		],
+		tags: [TAGS.JAVASCRIPT, TAGS.BOOTSTRAP],
 	},
 	{
 		title: 'Advice Generator',
@@ -62,20 +88,7 @@ const PROJECTS = [
 		link: 'https://advice-generator-app-lemon.vercel.app/',
 		github: 'https://github.com/josergz/advice-generator-app',
 		image: '/img/advice-preview.webp',
-		tags: [
-			{
-				name: 'HTML',
-				icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg',
-			},
-			{
-				name: 'SASS',
-				icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg',
-			},
-			{
-				name: 'JavaScript',
-				icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
-			},
-		],
+		tags: [TAGS.HTML, TAGS.CSS, TAGS.SASS, TAGS.JAVASCRIPT],
 	},
 ];
 ---
@@ -90,6 +103,7 @@ const PROJECTS = [
 				<article class="group flex flex-col lg:flex-row bg-[#1E1E1E]  border-gray-600 rounded-lg overflow-hidden shadow-md transition-all duration-300 hover:shadow-lg w-full mx-auto">
 					<div class="lg:w-1/2 w-full overflow-hidden">
 						<img
+							loading="lazy"
 							src={image}
 							alt={`Vista previa de ${title}`}
 							class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110 group-focus:scale-110"
@@ -99,12 +113,18 @@ const PROJECTS = [
 					<div class="flex flex-col flex-1 p-6 lg:p-8 lg:w-1/2">
 						<h1 class="text-xl font-semibold text-gray-200">{title}</h1>
 						<div class="flex gap-2 flex-wrap mt-3">
-							{tags.map(({ name, icon }) => (
-								<div class="flex items-center bg-gray-800 px-3 py-1 rounded-md">
-									<img src={icon} alt={name} class="w-5 h-5 mr-2" />
-									<span class="text-gray-300 text-sm">{name}</span>
-								</div>
-							))}
+							<ul class="flex flex-row mb-2 gap-x-2">
+								{tags.map((tag) => (
+									<li>
+										<span
+											class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+										>
+											<tag.icon class="size-4" />
+											{tag.name}
+										</span>
+									</li>
+								))}
+							</ul>
 						</div>
 						<p class="text-gray-400 text-base mt-4 flex-1">{description}</p>
 						<div class="flex gap-4 mt-6">
@@ -121,7 +141,8 @@ const PROJECTS = [
 								target="_blank"
 								class="flex items-center gap-3 px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-md hover:bg-blue-500 focus:ring focus:ring-blue-400"
 							>
-								🔗 <span>Live Demo</span>
+								<Link class="size-4" />
+								Preview
 							</a>
 						</div>
 					</div>
