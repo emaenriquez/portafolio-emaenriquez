@@ -6,7 +6,7 @@ Welcome to my portfolio! 🎉 I am a passionate **web developer** using **Astro*
 
 Here’s a sneak peek at what my portfolio looks like:
 
-![Portfolio Preview](./public/img/img-preview.png)
+![Portfolio Preview](./public/img/preview.png)
 
 ## 🚀 Technologies I Use
 
