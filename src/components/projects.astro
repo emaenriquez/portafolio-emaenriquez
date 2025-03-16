@@ -1,0 +1,132 @@
+---
+import GitHubIcon from '../components/icons/github.astro';
+const PROJECTS = [
+	{
+		title: 'One Dark Vibrant Theme',
+		description:
+			'One Dark Vibrant Theme es un tema vibrante y colorido para Visual Studio Code, basado en el popular One Dark, con tonos brillantes y una experiencia visual mejorada.',
+		link: 'https://marketplace.visualstudio.com/items?itemName=josergz.one-dark-vibrant-theme',
+		github: 'https://github.com/josergz/one-dark-vibrant-theme',
+		image: '/public/img/vscodetheme-preview.webp',
+		tags: [
+			{
+				name: 'VSCode',
+				icon: 'https://raw.githubusercontent.com/devicons/devicon/ca28c779441053191ff11710fe24a9e6c23690d6/icons/vscode/vscode-original.svg',
+			},
+		],
+	},
+	{
+		title: 'Porfolio de Programador Web',
+		description:
+			'Este es mi porfolio personal donde muestro mis habilidades como desarrollador web. Utilizo Astro para la estructura y Tailwind para el diseño, creando una experiencia optimizada y rápida para los usuarios.',
+		link: '#',
+		github: 'https://github.com/josergz/portfolio',
+		image: '/public/img/portfolio-preview.webp',
+		tags: [
+			{
+				name: 'Astro',
+				icon: 'https://raw.githubusercontent.com/devicons/devicon/ca28c779441053191ff11710fe24a9e6c23690d6/icons/astro/astro-original.svg',
+			},
+			{
+				name: 'Tailwind',
+				icon: 'https://raw.githubusercontent.com/devicons/devicon/ca28c779441053191ff11710fe24a9e6c23690d6/icons/tailwindcss/tailwindcss-original.svg',
+			},
+		],
+	},
+	{
+		title: 'Weather App',
+		description:
+			'Weather App es una aplicación del clima que usa una API en tiempo real para mostrar el clima actual y pronósticos en una interfaz minimalista y limpia.',
+		link: 'https://weather-app-itsr.vercel.app/',
+		github: 'https://github.com/josergz/weather_app',
+		image: '/public/img/weather-preview.webp',
+		tags: [
+			{
+				name: 'JavaScript',
+				icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
+			},
+			{
+				name: 'Firebase',
+				icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg',
+			},
+			{
+				name: 'Bootstrap',
+				icon: 'https://raw.githubusercontent.com/devicons/devicon/ca28c779441053191ff11710fe24a9e6c23690d6/icons/bootstrap/bootstrap-original.svg',
+			},
+		],
+	},
+	{
+		title: 'Advice Generator',
+		description:
+			'Advice Generator es una aplicación que genera consejos aleatorios de una API, con un diseño simple y limpio que utiliza HTML, SASS y JavaScript.',
+		link: 'https://advice-generator-app-lemon.vercel.app/',
+		github: 'https://github.com/josergz/advice-generator-app',
+		image: '/public/img/advice-preview.webp',
+		tags: [
+			{
+				name: 'HTML',
+				icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg',
+			},
+			{
+				name: 'SASS',
+				icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg',
+			},
+			{
+				name: 'JavaScript',
+				icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
+			},
+		],
+	},
+];
+---
+
+<section class="flex flex-col w-full space-y-10 p-4 md:p-10">
+	<h1 id="projects" class="text-center font-semibold text-3xl text-gray-200">
+		🚀 Proyectos
+	</h1>
+	<div class="flex flex-col gap-8 m-auto justify-center w-full">
+		{
+			PROJECTS.map(({ image, title, description, tags, link, github }) => (
+				<article class="group flex flex-col lg:flex-row bg-[#1E1E1E]  border-gray-600 rounded-lg overflow-hidden shadow-md transition-all duration-300 hover:shadow-lg w-full mx-auto">
+					<div class="lg:w-1/2 w-full overflow-hidden">
+						<img
+							src={image}
+							alt={`Vista previa de ${title}`}
+							class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110 group-focus:scale-110"
+						/>
+					</div>
+
+					<div class="flex flex-col flex-1 p-6 lg:p-8 lg:w-1/2">
+						<h3 class="text-xl font-semibold text-gray-200">{title}</h3>
+						<div class="flex gap-2 flex-wrap mt-3">
+							{tags.map(({ name, icon }) => (
+								<div class="flex items-center bg-gray-800 px-3 py-1 rounded-md">
+									<img src={icon} alt={name} class="w-5 h-5 mr-2" />
+									<span class="text-gray-300 text-sm">{name}</span>
+								</div>
+							))}
+						</div>
+						<p class="text-gray-400 text-base mt-4 flex-1">{description}</p>
+						<div class="flex gap-4 mt-6">
+							<a
+								href={github}
+								target="_blank"
+								class="flex items-center gap-3 px-4 py-2 bg-gray-800 text-gray-200 text-sm font-medium rounded-md hover:bg-gray-700 focus:ring focus:ring-gray-500"
+							>
+								<GitHubIcon class="size-5" />
+								<span>Código</span>
+							</a>
+							<a
+								href={link}
+								target="_blank"
+								class="flex items-center gap-3 px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-md hover:bg-blue-500 focus:ring focus:ring-blue-400"
+							>
+								🔗 <span>Live Demo</span>
+							</a>
+						</div>
+					</div>
+				</article>
+			))
+		}
+	</div>
+</section>

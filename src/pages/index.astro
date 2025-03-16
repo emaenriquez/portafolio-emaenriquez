@@ -1,103 +1,82 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import LinkedinIcon from '../components/icons/linkedin.astro';
-import GitHubIcon from '../components/icons/github.astro';
 import Habilidades from '../components/habilidades.astro';
 import About from '../components/about.astro';
+import Projects from '../components/projects.astro';
+import SectionContainer from '../components/SectionContainer.astro';
+import Intro from '../components/intro.astro';
 ---
 
 <Layout
-	title="Porfolio de José Rodríguez - Desarrollador y programador web"
+	title="José Rodríguez - Desarrollador y programador web"
 	description="Contrata a José Rodríguez, frontend developer "
 >
 	<main>
-		<section class="w-full mx-auto lg:w-[740px] py-44 space-y-2">
-			<h2 class="text-white text-3xl">Hi, I'm José Rodríguez</h2>
-			<h1 id="typed-container" class="text-blue-500 text-5xl font-bold">
-				<span id="typed"></span>
-			</h1>
-			<p class="text-white text-lg">
-				Soy <span class="text-yellow-200/90"
-					>Ingeniero en Sistemas Computacionales</span
-				> con especialización en Ingeniería de Software. Mi enfoque principal se
-				centra en <span class="text-yellow-200/90">programación web</span>,
-				donde he acumulado experiencia trabajando en diversos proyectos que
-				hacen uso de tecnologías como HTML, CSS , JavaScript y frameworks
-				modernos.
-			</p>
-			<ul class="flex gap-4 pt-4">
-				<li>
-					<a
-						href="https://www.linkedin.com/in/josergz/"
-						aria-label="LinkedIn"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						<LinkedinIcon class="w-8 h-8 hover:text-blue-500" />
-					</a>
-				</li>
-				<li>
-					<a
-						href="https://github.com/josergz"
-						aria-label="GitHub"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						<GitHubIcon class="w-8 h-8 hover:text-blue-500" />
-					</a>
-				</li>
-				<li>
-					<a
-						href="https://drive.google.com/uc?export=download&id=1f_AEJL13PSIVrjLAcHCzTUysFNu7VDod"
-						class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 transition-colors duration-300"
-					>
-						Download CV
-					</a>
-				</li>
-			</ul>
-		</section>
+		<SectionContainer id="top">
+			<Intro />
+		</SectionContainer>
+
+		<SectionContainer id="habilidades">
+			<Habilidades />
+		</SectionContainer>
+
+		<SectionContainer id="projects">
+			<Projects />
+		</SectionContainer>
+
+		<SectionContainer id="about">
+			<About />
+		</SectionContainer>
 	</main>
 
-	<Habilidades />
-	<About />
-</Layout>
+	<script>
+		import Typed from 'typed.js';
 
-<script>
-	import Typed from 'typed.js';
+		const typed = new Typed('#typed', {
+			strings: ['FrontEnd Developer', 'Software Engineer'],
+			typeSpeed: 50,
+			backSpeed: 30,
+			loop: true,
+			startDelay: 500,
+			showCursor: true,
+			cursorChar: '|',
+			backDelay: 1500,
+		});
+	</script>
 
-	// Inicializa Typed.js
-	var typed = new Typed('#typed', {
-		strings: ['FrontEnd Developer', 'Software Engineer'], // Textos a mostrar
-		typeSpeed: 50, // Velocidad de escritura
-		backSpeed: 30, // Velocidad de borrado
-		loop: true, // Repetir infinitamente
-		startDelay: 500, // Retraso inicial
-		showCursor: true, // Mostrar cursor
-		cursorChar: '|', // Caracter del cursor
-		backDelay: 1500, // Tiempo de espera (2 segundos) después de escribir cada frase antes de borrarla
-	});
-</script>
-
-<style>
-	/* Asegurar que el h1 tenga una altura mínima */
-	#typed-container {
-		min-height: 1em; /* Asegura que h1 no se colapse, ajusta este valor según sea necesario */
-		display: inline-block; /* El contenido y el cursor deben estar en la misma línea */
-		white-space: nowrap; /* Evita que el texto se rompa en varias líneas */
-	}
-
-	/* Estilo del cursor */
-	#typed-container .typed-cursor {
-		color: #60a5fa; /* Color del cursor */
-		font-size: 1em; /* Asegura que el cursor tenga el mismo tamaño que el texto */
-		animation: blink 0.75s step-end infinite; /* Efecto de parpadeo */
-		line-height: 1; /* Asegura que el cursor esté alineado con el texto */
-	}
-
-	/* Animación de parpadeo del cursor */
-	@keyframes blink {
-		50% {
-			opacity: 0;
+	<style>
+		#typed-container {
+			min-height: 1.2em;
+			display: inline-block;
+			white-space: nowrap;
 		}
-	}
-</style>
+
+		@media (max-width: 640px) {
+			#typed-container {
+				white-space: normal;
+				min-height: 1.5em;
+				display: block;
+				margin-bottom: 0.5rem;
+			}
+
+			#typed-container .typed-cursor {
+				position: relative;
+				top: -2px;
+				line-height: 1.4;
+			}
+		}
+
+		#typed-container .typed-cursor {
+			color: #60a5fa;
+			font-size: 1em;
+			animation: blink 0.75s step-end infinite;
+			line-height: 1.3;
+		}
+
+		@keyframes blink {
+			50% {
+				opacity: 0;
+			}
+		}
+	</style>
+</Layout>
