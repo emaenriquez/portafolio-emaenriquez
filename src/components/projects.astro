@@ -60,16 +60,24 @@ const PROJECTS = [
 			'One Dark Vibrant Theme es un tema vibrante y colorido para Visual Studio Code, basado en el popular One Dark, con tonos brillantes y una experiencia visual mejorada.',
 		link: 'https://marketplace.visualstudio.com/items?itemName=josergz.one-dark-vibrant-theme',
 		github: 'https://github.com/josergz/one-dark-vibrant-theme',
-		image: '/img/vscodetheme-preview.webp',
+		image: {
+			src: '/img/vscodetheme-preview-1200.webp',
+			srcset:
+				'/img/vscodetheme-preview-600.webp 600w, /img/vscodetheme-preview-800.webp 800w, /img/vscodetheme-preview-1200.webp 1200w',
+		},
 		tags: [TAGS.VSCODE],
 	},
 	{
-		title: 'Porfolio de Programador Web',
+		title: 'Portafolio de Programador Web',
 		description:
-			'Este es mi porfolio personal donde muestro mis habilidades como desarrollador web. Utilizo Astro para la estructura y Tailwind para el diseño, creando una experiencia optimizada y rápida para los usuarios.',
+			'Este es mi portafolio personal donde muestro mis habilidades como desarrollador web. Utilizo Astro para la estructura y Tailwind para el diseño, creando una experiencia optimizada y rápida para los usuarios.',
 		link: 'https://portfolio-one-khaki-21.vercel.app/',
 		github: 'https://github.com/josergz/portfolio',
-		image: '/img/portfolio-preview.webp',
+		image: {
+			src: '/img/portfolio-preview-1200.webp',
+			srcset:
+				'/img/portfolio-preview-600.webp 600w, /img/portfolio-preview-800.webp 800w, /img/portfolio-preview-1200.webp 1200w',
+		},
 		tags: [TAGS.ASTRO, TAGS.TAILWIND],
 	},
 	{
@@ -78,7 +86,11 @@ const PROJECTS = [
 			'Weather App es una aplicación del clima que usa una API en tiempo real para mostrar el clima actual y pronósticos en una interfaz minimalista y limpia.',
 		link: 'https://weather-app-itsr.vercel.app/',
 		github: 'https://github.com/josergz/weather_app',
-		image: '/img/weather-preview.webp',
+		image: {
+			src: '/img/weather-preview-1200.webp',
+			srcset:
+				'/img/weather-preview-600.webp 600w, /img/weather-preview-800.webp 800w, /img/weather-preview-1200.webp 1200w',
+		},
 		tags: [TAGS.JAVASCRIPT, TAGS.BOOTSTRAP],
 	},
 	{
@@ -87,7 +99,11 @@ const PROJECTS = [
 			'Advice Generator es una aplicación que genera consejos aleatorios de una API, con un diseño simple y limpio que utiliza HTML, SASS y JavaScript.',
 		link: 'https://advice-generator-app-lemon.vercel.app/',
 		github: 'https://github.com/josergz/advice-generator-app',
-		image: '/img/advice-preview.webp',
+		image: {
+			src: '/img/advice-preview-1200.webp',
+			srcset:
+				'/img/advice-preview-600.webp 600w, /img/advice-preview-800.webp 800w, /img/advice-preview-1200.webp 1200w',
+		},
 		tags: [TAGS.HTML, TAGS.CSS, TAGS.SASS, TAGS.JAVASCRIPT],
 	},
 ];
@@ -100,11 +116,13 @@ const PROJECTS = [
 	<div class="flex flex-col gap-8 m-auto justify-center w-full">
 		{
 			PROJECTS.map(({ image, title, description, tags, link, github }) => (
-				<article class="group flex flex-col lg:flex-row bg-[#1E1E1E]  border-gray-600 rounded-lg overflow-hidden shadow-md transition-all duration-300 hover:shadow-lg w-full mx-auto">
+				<article class="group flex flex-col lg:flex-row bg-[#1E1E1E] border-gray-600 rounded-lg overflow-hidden shadow-md transition-all duration-300 hover:shadow-lg w-full mx-auto">
 					<div class="lg:w-1/2 w-full overflow-hidden">
 						<img
 							loading="lazy"
-							src={image}
+							src={image.src}
+							srcset={image.srcset}
+							sizes="(max-width: 600px) 600px, (max-width: 1024px) 800px, 1200px"
 							alt={`Vista previa de ${title}`}
 							class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110 group-focus:scale-110"
 						/>
