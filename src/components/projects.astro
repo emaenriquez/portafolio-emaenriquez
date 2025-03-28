@@ -9,6 +9,7 @@ import Sass from './icons/sass.astro';
 import Css from './icons/css.astro';
 import Vscode from './icons/vscode.astro';
 import Link from './icons/link.astro';
+import Briefcase from './icons/briefcase.astro';
 
 const TAGS = {
 	ASTRO: {
@@ -57,7 +58,7 @@ const PROJECTS = [
 	{
 		title: 'One Dark Vibrant Theme',
 		description:
-			'One Dark Vibrant Theme es un tema vibrante y colorido para Visual Studio Code, basado en el popular One Dark, con tonos brillantes y una experiencia visual mejorada.',
+			'Un tema personalizado para Visual Studio Code, basado en el popular One Dark. Diseñado con un esquema de colores oscuros y vibrantes, lo que genera una experiencia visual mejorada.',
 		link: 'https://marketplace.visualstudio.com/items?itemName=josergz.one-dark-vibrant-theme',
 		github: 'https://github.com/josergz/one-dark-vibrant-theme',
 		image: {
@@ -68,9 +69,9 @@ const PROJECTS = [
 		tags: [TAGS.VSCODE],
 	},
 	{
-		title: 'Portafolio de Programador Web',
+		title: 'Porfolio de Programador Web',
 		description:
-			'Este es mi portafolio personal donde muestro mis habilidades como desarrollador web. Utilizo Astro para la estructura y Tailwind para el diseño, creando una experiencia optimizada y rápida para los usuarios.',
+			'Un portafolio profesional creado con Astro y Tailwind, mostrando mis proyectos y habilidades como desarrollador web. El diseño es responsivo y optimizado para una navegación fluida.',
 		link: 'https://portfolio-one-khaki-21.vercel.app/',
 		github: 'https://github.com/josergz/portfolio',
 		image: {
@@ -83,7 +84,7 @@ const PROJECTS = [
 	{
 		title: 'Weather App',
 		description:
-			'Weather App es una aplicación del clima que usa una API en tiempo real para mostrar el clima actual y pronósticos en una interfaz minimalista y limpia.',
+			'Una aplicación interactiva que muestra el clima actual, consumiendo datos de una API pública. Permite conocer la temperatura, humedad y otras condiciones meteorológicas de cualquier ciudad.',
 		link: 'https://weather-app-itsr.vercel.app/',
 		github: 'https://github.com/josergz/weather_app',
 		image: {
@@ -96,7 +97,7 @@ const PROJECTS = [
 	{
 		title: 'Advice Generator',
 		description:
-			'Advice Generator es una aplicación que genera consejos aleatorios de una API, con un diseño simple y limpio que utiliza HTML, SASS y JavaScript.',
+			'Una aplicación que genera consejos aleatorios. Consume una API para mostrar consejos útiles y motivacionales de manera dinámica.',
 		link: 'https://advice-generator-app-lemon.vercel.app/',
 		github: 'https://github.com/josergz/advice-generator-app',
 		image: {
@@ -110,8 +111,11 @@ const PROJECTS = [
 ---
 
 <section class="flex flex-col w-full space-y-10 p-4 md:p-10">
-	<h1 id="projects" class="text-center font-semibold text-3xl text-gray-200">
-		🚀 Proyectos
+	<h1
+		id="projects"
+		class="flex items-center align-middle justify-center text-center gap-2 font-semibold text-3xl"
+	>
+		<Briefcase class="size-8" /> Proyectos
 	</h1>
 	<div class="flex flex-col gap-8 m-auto justify-center w-full">
 		{

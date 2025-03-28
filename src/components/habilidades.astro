@@ -8,10 +8,16 @@ import Bootstrap from './icons/bootstrap.astro';
 import Tailwind from './icons/tailwind.astro';
 import Javascript from './icons/javascript.astro';
 import Astroicon from './icons/astroicon.astro';
+import Code from './icons/code.astro';
+import Rocket from './icons/rocket.astro';
 ---
 
 <section class="flex flex-col w-full space-y-10 p-4 md:p-10">
-	<h1 class="text-center font-semibold text-3xl">🛠️ Habilidades</h1>
+	<h1
+		class="flex items-center align-middle justify-center text-center gap-2 font-semibold text-3xl"
+	>
+		<Rocket class="size-8" /> Habilidades
+	</h1>
 	<ul class="flex m-auto gap-10 flex-wrap justify-center">
 		<li class="flex flex-col items-center gap-2 font-medium text-xl">
 			<Html class="size-16 transition-all duration-300 hover:scale-125" />
