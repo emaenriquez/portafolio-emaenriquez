@@ -1,82 +1,83 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Habilidades from '../components/habilidades.astro';
-import About from '../components/about.astro';
-import Projects from '../components/projects.astro';
-import SectionContainer from '../components/SectionContainer.astro';
-import Intro from '../components/intro.astro';
+import Layout from '../layouts/Layout.astro'
+import Habilidades from '../components/habilidades.astro'
+import About from '../components/about.astro'
+import Projects from '../components/projects.astro'
+import SectionContainer from '../components/SectionContainer.astro'
+import Intro from '../components/intro.astro'
+
+const title = 'José Rodríguez - Ingeniero de Software & Programador Web'
+const description =
+  'Trabajo contigo para crear sitios web modernos, rápidos y únicos que conecten con tu audiencia. ¡Construyamos algo increíble juntos!'
 ---
 
-<Layout
-	title="José Rodríguez - Desarrollador y programador web"
-	description="Contrata a José Rodríguez, frontend developer "
->
-	<main>
-		<SectionContainer id="top">
-			<Intro />
-		</SectionContainer>
+<Layout title={title} description={description}>
+  <main>
+    <SectionContainer id="top">
+      <Intro />
+    </SectionContainer>
 
-		<SectionContainer id="habilidades">
-			<Habilidades />
-		</SectionContainer>
+    <SectionContainer id="habilidades">
+      <Habilidades />
+    </SectionContainer>
 
-		<SectionContainer id="projects">
-			<Projects />
-		</SectionContainer>
+    <SectionContainer id="projects">
+      <Projects />
+    </SectionContainer>
 
-		<SectionContainer id="about">
-			<About />
-		</SectionContainer>
-	</main>
+    <SectionContainer id="about">
+      <About />
+    </SectionContainer>
+  </main>
 
-	<script>
-		import Typed from 'typed.js';
+  <script>
+    import Typed from 'typed.js'
 
-		const typed = new Typed('#typed', {
-			strings: ['FrontEnd Developer', 'Software Engineer'],
-			typeSpeed: 50,
-			backSpeed: 30,
-			loop: true,
-			startDelay: 500,
-			showCursor: true,
-			cursorChar: '|',
-			backDelay: 1500,
-		});
-	</script>
+    const typed = new Typed('#typed', {
+      strings: ['FrontEnd Developer', 'Software Engineer'],
+      typeSpeed: 50,
+      backSpeed: 30,
+      loop: true,
+      startDelay: 500,
+      showCursor: true,
+      cursorChar: '|',
+      backDelay: 1500,
+    })
+  </script>
 
-	<style>
-		#typed-container {
-			min-height: 1.2em;
-			display: inline-block;
-			white-space: nowrap;
-		}
+  <style>
+    #typed-container {
+      min-height: 1.2em;
+      display: inline-block;
+      white-space: nowrap;
+    }
 
-		@media (max-width: 640px) {
-			#typed-container {
-				white-space: normal;
-				min-height: 1.5em;
-				display: block;
-				margin-bottom: 0.5rem;
-			}
+    @media (max-width: 640px) {
+      #typed-container {
+        white-space: normal;
+        min-height: 1.5em;
+        display: block;
+        margin-bottom: 0.5rem;
+      }
 
-			#typed-container .typed-cursor {
-				position: relative;
-				top: -2px;
-				line-height: 1.4;
-			}
-		}
+      #typed-container .typed-cursor {
+        position: relative;
+        top: -2px;
+        line-height: 1.4;
+      }
+    }
 
-		#typed-container .typed-cursor {
-			color: #60a5fa;
-			font-size: 1em;
-			animation: blink 0.75s step-end infinite;
-			line-height: 1.3;
-		}
+    #typed-container .typed-cursor {
+      color: #60a5fa;
+      font-size: 1em;
+      animation: blink 0.75s step-end infinite;
+      line-height: 1.3;
+    }
 
-		@keyframes blink {
-			50% {
-				opacity: 0;
-			}
-		}
-	</style>
+    @keyframes blink {
+      50% {
+        opacity: 0;
+      }
+    }
+  </style>
 </Layout>
