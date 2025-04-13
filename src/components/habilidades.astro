@@ -1,59 +1,84 @@
 ---
-import Git from './icons/git.astro';
-import Github from '../components/icons/github.astro';
-import Html from './icons/html.astro';
-import Css from './icons/css.astro';
-import Sass from './icons/sass.astro';
-import Bootstrap from './icons/bootstrap.astro';
-import Tailwind from './icons/tailwind.astro';
-import Javascript from './icons/javascript.astro';
-import Astroicon from './icons/astroicon.astro';
-import Code from './icons/code.astro';
-import Rocket from './icons/rocket.astro';
+import git from '../../public/icons/git.svg'	
+import javascript from '../../public/icons/javascript.svg'
+import mysql from '../../public/icons/mysql.svg'
+import mongodb from '../../public/icons/mongodb.svg'
+import python from '../../public/icons/python.svg'
+import tailwindcss from '../../public/icons/tailwindcss.svg'
+import react from '../../public/icons/react.svg'
+import reactrouter from '../../public/icons/reactrouter.svg'
+import html from '../../public/icons/html.svg'
+import css from '../../public/icons/css_old.svg'
+import bootstrap from '../../public/icons/bootstrap.svg'
+import django from '../../public/icons/django.svg'
+import typescript from '../../public/icons/typescript.svg'
 ---
 
 <section class="flex flex-col w-full space-y-10 p-4 md:p-10">
 	<h1
 		class="flex items-center align-middle justify-center text-center gap-2 font-semibold text-3xl"
 	>
-		<Rocket class="size-8" /> Habilidades
+		<!-- <Rocket class="size-8" />  -->
+		Habilidades
 	</h1>
 	<ul class="flex m-auto gap-10 flex-wrap justify-center">
 		<li class="flex flex-col items-center gap-2 font-medium text-xl">
-			<Html class="size-16 transition-all duration-300 hover:scale-125" />
+			<img src={html.src} alt="Tailwind CSS" class="size-16 transition-all duration-300 hover:scale-125" />
 			<span class="mt-1 text-sm text-white/90">HTML</span>
 		</li>
 		<li class="flex flex-col items-center gap-2 font-medium text-xl">
-			<Css class="size-16 transition-all duration-300 hover:scale-125" />
+			<img src={css.src} alt="Tailwind CSS" class="size-16 transition-all duration-300 hover:scale-125" />
 			<span class="mt-1 text-sm text-white/90">CSS</span>
 		</li>
 		<li class="flex flex-col items-center gap-2 font-medium text-xl">
-			<Sass class="size-16 transition-all duration-300 hover:scale-125" />
-			<span class="mt-1 text-sm text-white/90">Sass</span>
-		</li>
-		<li class="flex flex-col items-center gap-2 font-medium text-xl">
-			<Bootstrap class="size-16 transition-all duration-300 hover:scale-125" />
+			<img src={bootstrap.src} alt="Tailwind CSS" class="size-16 transition-all duration-300 hover:scale-125" />
 			<span class="mt-1 text-sm text-white/90">Bootstrap</span>
 		</li>
+		
 		<li class="flex flex-col items-center gap-2 font-medium text-xl">
-			<Tailwind class="size-16 transition-all duration-300 hover:scale-125" />
-			<span class="mt-1 text-sm text-white/90">Tailwind</span>
+			<img src={tailwindcss.src} alt="Tailwind CSS" class="size-16 transition-all duration-300 hover:scale-125" />
+			<span class="mt-1 text-sm text-white/90">Tailwind CSS</span>
 		</li>
+
 		<li class="flex flex-col items-center gap-2 font-medium text-xl">
-			<Javascript class="size-16 transition-all duration-300 hover:scale-125" />
+			<img src={javascript.src} alt="JavaScript" class="size-16 transition-all duration-300 hover:scale-125" />
 			<span class="mt-1 text-sm text-white/90">JavaScript</span>
 		</li>
 		<li class="flex flex-col items-center gap-2 font-medium text-xl">
-			<Astroicon class="size-16 transition-all duration-300 hover:scale-125" />
-			<span class="mt-1 text-sm text-white/90">Astro</span>
+			<img src={typescript.src} alt="TypeScript" class="size-16 transition-all duration-300 hover:scale-125" />
+			<span class="mt-1 text-sm text-white/90">TypeScript</span>
 		</li>
 		<li class="flex flex-col items-center gap-2 font-medium text-xl">
-			<Git class="size-16 transition-all duration-300 hover:scale-125" />
+			<img src={react.src} alt="React" class="size-16 transition-all duration-300 hover:scale-125" />
+			<span class="mt-1 text-sm text-white/90">React</span>
+		</li>
+		<li class="flex flex-col items-center gap-2 font-medium text-xl">
+			<img src={reactrouter.src} alt="React Router" class="size-16 transition-all duration-300 hover:scale-125" />
+			<span class="mt-1 text-sm text-white/90">React Router</span>
+		</li>
+		<li class="flex flex-col items-center gap-2 font-medium text-xl">
+			<img src={git.src} alt="Git" class="size-16 transition-all duration-300 hover:scale-125" />
 			<span class="mt-1 text-sm text-white/90">Git</span>
 		</li>
+
 		<li class="flex flex-col items-center gap-2 font-medium text-xl">
-			<Github class="size-16 transition-all duration-300 hover:scale-125" />
-			<span class="mt-1 text-sm text-white/90">GitHub</span>
+			<img src={python.src} alt="Python" class="size-16 transition-all duration-300 hover:scale-125" />
+			<span class="mt-1 text-sm text-white/90">Python</span>
 		</li>
+
+		<li class="flex flex-col items-center gap-2 font-medium text-xl">
+			<img src={django.src} alt="Python" class="size-16 transition-all duration-300 hover:scale-125" />
+			<span class="mt-1 text-sm text-white/90">Django</span>
+		</li>
+
+		<li class="flex flex-col items-center gap-2 font-medium text-xl">
+			<img src={mysql.src} alt="MySQL" class="size-16 transition-all duration-300 hover:scale-125" />
+			<span class="mt-1 text-sm text-white/90">MySQL</span>
+		</li>
+		<li class="flex flex-col items-center gap-2 font-medium text-xl">
+			<img src={mongodb.src} alt="MongoDB" class="size-16 transition-all duration-300 hover:scale-125" />
+			<span class="mt-1 text-sm text-white/90">MongoDB</span>
+		</li>
+
 	</ul>
 </section>

@@ -1,0 +1,37 @@
+---
+// Importa íconos si los tienes o usa URLs para los enlaces
+import gmailIcon from '../../public/icons/gmail.svg';
+import linkedinIcon from '../../public/icons/linkedin.svg';
+// import whatsappIcon from '../../public/icons/whatsapp.svg';
+---
+
+<section id="contact" class="flex flex-col w-full space-y-10 p-4 md:p-10">
+    <h1 class="text-center text-3xl font-semibold text-white">
+        ¿Quieres contactarme? ¡Hazlo por aquí!
+    </h1>
+    <ul class="flex flex-col sm:flex-row justify-center items-center gap-6">
+        <li>
+            <a
+                href="mailto:enriquezemanuel51@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center gap-3 text-white hover:text-blue-500 transition-colors"
+            >
+                <img src={gmailIcon.src} alt="Gmail" class="w-8 h-8" />
+                <span class="text-lg">Gmail</span>
+            </a>
+        </li>
+        <li>
+            <a
+                href="https://www.linkedin.com/in/emaenriquez/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center gap-3 text-white hover:text-blue-500 transition-colors"
+            >
+                <img src={linkedinIcon.src} alt="LinkedIn" class="w-8 h-8" />
+                <span class="text-lg">LinkedIn</span>
+            </a>
+        </li>
+       
+    </ul>
+</section>

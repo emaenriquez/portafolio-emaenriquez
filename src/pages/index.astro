@@ -1,14 +1,16 @@
 ---
-import Layout from '../layouts/Layout.astro'
-import Habilidades from '../components/habilidades.astro'
-import About from '../components/about.astro'
-import Projects from '../components/projects.astro'
-import SectionContainer from '../components/SectionContainer.astro'
-import Intro from '../components/intro.astro'
+import Layout from "../layouts/Layout.astro";
+import Habilidades from "../components/habilidades.astro";
+import About from "../components/about.astro";
+import Projects from "../components/projects.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Intro from "../components/intro.astro";
+import Contact from "../components/contact.astro";
 
-const title = 'José Rodríguez - Desarrollador Web'
+
+const title = "Emanuel Enriquez - Desarrollador de Software";
 const description =
-  '+1 año diseñando experiencias web desde Tabasco, México. Combino JavaScript con potentes herramientas como Astro y Tailwind, para construir interfaces dinámicas, modernas y eficientes. ¿Innovamos juntos? 🚀💫'
+  "Estudiante avanzado de la Tecnicatura en Desarrollo de software";
 ---
 
 <Layout title={title} description={description}>
@@ -17,32 +19,35 @@ const description =
       <Intro />
     </SectionContainer>
 
-    <SectionContainer id="habilidades">
-      <Habilidades />
+    <SectionContainer id="about">
+      <About />
     </SectionContainer>
 
     <SectionContainer id="projects">
       <Projects />
     </SectionContainer>
 
-    <SectionContainer id="about">
-      <About />
+    <SectionContainer id="habilidades">
+      <Habilidades />
+    </SectionContainer>
+    <SectionContainer id="contact">
+      <Contact />
     </SectionContainer>
   </main>
 
   <script>
-    import Typed from 'typed.js'
+    import Typed from "typed.js";
 
-    const typed = new Typed('#typed', {
-      strings: ['FrontEnd Developer', 'Software Engineer'],
+    const typed = new Typed("#typed", {
+      strings: ["Desarrollador FrontEnd", "Desarrollador de Software"],
       typeSpeed: 50,
       backSpeed: 30,
       loop: true,
       startDelay: 500,
       showCursor: true,
-      cursorChar: '|',
+      cursorChar: "|",
       backDelay: 1500,
-    })
+    });
   </script>
 
   <style>
