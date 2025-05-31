@@ -5,7 +5,8 @@
 		<!-- Logo -->
 		<a href="/" class="group flex items-center gap-2">
 			<h1
-				class="font-bold text-lg sm:text-xl text-white group-hover:text-blue-500 transition-colors duration-200"
+				class="font-bold text-lg sm:text-xl text-white group-hover:text-purple-500
+				transition-colors duration-200"
 			>
 				{'<emaenriquez/>'}
 			</h1>
@@ -38,7 +39,7 @@
 		<div class="md:hidden relative">
 			<button
 				id="menuButton"
-				class="text-white hover:text-blue-500 transition-colors p-2"
+				class="text-white hover:text-purple-500 transition-colors p-2"
 				aria-label="Toggle menu"
 				aria-expanded="false"
 			>
@@ -62,10 +63,11 @@
 				class="hidden absolute right-0 top-full mt-2 w-48 bg-gray-800/95 backdrop-blur-sm rounded-lg shadow-xl py-2"
 			>
 				<ul class="flex flex-col gap-2">
-					<li><a href="#top" class="mobile-menu-link">Home</a></li>
-					<li><a href="#about" class="mobile-menu-link">About</a></li>
-					<li><a href="#projects" class="mobile-menu-link">Projects</a></li>
-					<li><a href="#contact" class="mobile-menu-link">Contact</a></li>
+					<li><a href="#top" class="mobile-menu-link">Inicio</a></li>
+					<li><a href="#about" class="mobile-menu-link">Sobre mí</a></li>
+					<li><a href="#projects" class="mobile-menu-link">Proyectos</a></li>
+					<li><a href="#habilidades" class="mobile-menu-link">Habilidades</a></li>
+					<li><a href="#contact" class="mobile-menu-link">Contacto</a></li>
 				</ul>
 			</div>
 		</div>
@@ -115,9 +117,9 @@
 
 <style>
 	.nav-link {
-		@apply text-white hover:text-blue-500 transition-colors duration-200 font-medium relative py-1 text-sm lg:text-base
+		@apply text-white hover:text-purple-500 transition-colors duration-200 font-medium relative py-1 text-sm lg:text-base
 		after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px]
-		after:bg-blue-500 after:transition-all after:duration-300 hover:after:w-full;
+		after:bg-purple-500 after:transition-all after:duration-300 hover:after:w-full;
 	}
 
 	.mobile-menu-link {
